@@ -1,0 +1,29 @@
+int X_key = A1;
+int y_key = A0;
+int x_value = 0;
+int y_value = 0;
+int switch = 9;
+int sw_value = 0;
+
+void setup()
+{
+  pinMode(X_key,INPUT);
+  pinMode(y_key,INPUT);
+  pinMode(switch,INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  x_value = digitalRead(X_key);
+  y_value = digitalRead(y_key);
+  sw_value = digitalRead(switch);
+  
+  Serial.print("X_value");
+  Serial.println(x_value);
+  Serial.print("Y_value);
+  Serial.println(y_value);
+}
+
+
+
